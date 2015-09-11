@@ -39,8 +39,6 @@
     "zip" => "80501"
   );
 
-
-
   $x = "madwire";
 
   print $companies[$x]['name'];
