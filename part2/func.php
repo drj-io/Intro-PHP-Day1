@@ -3,12 +3,23 @@
 function countEmployees($employees){
 
 
+    $count = 0;
+    foreach($employees as $employee){
 
-    die('I died :(');
+      $count++;
+    }
+    print $count;
 
 }
+function countEmployees2($employees){
 
-function capName($name){
+
+  return count($employees);
+
+}
+function capName($employee){
+
+  return ucfirst($employee);
 
 
 }

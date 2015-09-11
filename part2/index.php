@@ -4,6 +4,8 @@
 include('func.php');
 
 
+$totalEmployees = 0;
+
 
 $companies[] = array(
   "name" => "Madwire",
@@ -52,12 +54,27 @@ $companies[] = array(
         <td><?php print $company['name']; ?></td>
         <td><?php print $company['address']; ?></td>
         <td><?php print $company['city']; ?></td>
-        <td><?php countEmployees($company['employees']); ?>
+        <td><?php
+               $x = countEmployees2($company['employees']);
+               $totalEmployees += $x;
+               print $x;
+         ?>
+        </td>
+        <td>
+          <?php
+            foreach($company['employees'] as $employee) {
+              print capName($employee) . " ";
+            }
+           ?>
+
+        </td>
       </tr>
       <?php } ?>
 
   </table>
 
+
+<h1>Total number of employees = <?php print $totalEmployees; ?>
 
 <style>
   table { width: 100%; }
