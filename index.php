@@ -41,6 +41,8 @@
 
   $x = "madwire";
 
+
+  // bug fix
   print $companies[$x]['name'];
 
   foreach($companies as $key => $company){
