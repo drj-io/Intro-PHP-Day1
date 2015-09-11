@@ -1,4 +1,10 @@
 <?php
+
+
+include('func.php');
+
+
+
 $companies[] = array(
   "name" => "Madwire",
   "address" => "550 West Eisenhower Blvd",
@@ -13,7 +19,7 @@ $companies[] = array(
   "city" => "Boulder",
   "state" => "CO",
   "zip" => "80301",
-  "employees" => array('david','joe','jb','jerry')
+  "employees" => array('mary','anne','jeff')
 );
 $companies[] = array(
   "name" => "HP",
@@ -21,7 +27,7 @@ $companies[] = array(
   "city" => "Fort Collins",
   "state" => "CO",
   "zip" => "80524",
-  "employees" => array('david','joe','jb','jerry')
+  "employees" => array('bob','red','frank','phil','matt')
 );
 $companies[] = array(
   "name" => "Digital Globe",
@@ -29,7 +35,7 @@ $companies[] = array(
   "city" => "Longmont",
   "state" => "CO",
   "zip" => "80501",
-  "employees" => array('david','joe','jb','jerry')
+  "employees" => array('robert','aubrey')
 );
 
  ?><!doctype html>
@@ -46,6 +52,7 @@ $companies[] = array(
         <td><?php print $company['name']; ?></td>
         <td><?php print $company['address']; ?></td>
         <td><?php print $company['city']; ?></td>
+        <td><?php countEmployees($company['employees']); ?>
       </tr>
       <?php } ?>
 
